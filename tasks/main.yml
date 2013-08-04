@@ -1,0 +1,5 @@
+---
+- name: install unattended-upgrades
+  apt: pkg=unattended-upgrades state=present update_cache=yes
+- name: enable upgrades
+  copy: src=10periodic dest=/etc/apt/apt.conf.d/10periodic
